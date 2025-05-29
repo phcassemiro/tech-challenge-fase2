@@ -7,7 +7,10 @@ const postSchema = new mongoose.Schema(
         descricao : {type: String, required: [true, "A descrição do post é obrigatório"]},
         autor: {type: String , required: [true, "O autor do post é obrigatório"] }
     },
-    {versionKey: false}
+    {
+        versionKey: false,
+        timestamps: { createdAt: 'dataCriacao', updatedAt: 'dataAtualizacao' }
+    }
 );
 
 const post = mongoose.model("posts", postSchema);
