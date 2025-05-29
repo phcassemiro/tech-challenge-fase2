@@ -22,7 +22,7 @@ class PostController {
             const postEncontrado = await post.findById(id);
             if(postEncontrado !== null){
 
-                res.status(200).json(autorEncontrado);
+                res.status(200).json(postEncontrado);
             }else{
                 res.status(404).json({message: 'Id do post não localizado'})
             }
