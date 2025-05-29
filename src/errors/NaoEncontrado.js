@@ -1,4 +1,4 @@
-import ErroBase from "./ErroBase.js";
+import ErroBase from "./erroBase.js";
 
 class NaoEncontrado extends ErroBase{
     constructor(){
