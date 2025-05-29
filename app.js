@@ -1,6 +1,6 @@
 import express from "express"
-import conectaNaDatabase from "./config/db_Connect.js";
-import routes from "./routes/index.js"
+import conectaNaDatabase from "./config/dbConfig.js";
+import routes from "./routes/route.js"
 import manipuladorDeErros from "./middlewares/manipuladorDeErros.js";
 import manipulador404 from "./middlewares/manipulador404.js";
 

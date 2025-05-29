@@ -1,9 +1,11 @@
 {
   "name": "tech-challenge-fase2",
+  "type": "module",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
     "url": "https://github.com/phcassemiro/tech-challenge-fase2/issues"
   },
   "homepage": "https://github.com/phcassemiro/tech-challenge-fase2#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "eslint": "^9.27.0",
+    "express": "^5.1.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.1",
+    "nodemon": "^3.1.10"
+  }
 }
