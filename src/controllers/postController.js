@@ -2,18 +2,24 @@ import { post } from "../models/postModel.js";
 
 class PostController {
 
-    // static async listarPosts (req,res){
+    static async listarPostPorFiltro(req,res, next){
 
-    //     try {
-    //         const listaPosts = await post.find({});
-    //         res.status(200).json(listaPosts);
-    //     } catch (error) {
+        try {
+            const { titulo, descricao } = req.query;
+            const busca = {};
 
-    //         res.status(500).json({message: `${error.message} - falha na requisição`})
+            if(titulo) busca.titulo = { $regex: titulo, $options: "i" };
+            if(descricao) busca.descricao = { $regex: descricao, $options: "i" };
 
-    //     }
+            const postsResultado = await post.find(busca);
+            res.status(200).json(postsResultado);
 
-    // };
+        } catch (error) {
+
+            next(error);
+
+        }
+    };
 
     static async listarPosts(req, res) {
     try {
@@ -28,10 +34,10 @@ class PostController {
 
         res.status(200).json(postsFormatados);
     } catch (error) {
-        res.status(500).json({ message: `${error.message} - falha na requisição` });
-    }
-}
 
+        next(error);
+    }
+    };
 
     static async listarPostPorId (req,res,next){
 
@@ -100,7 +106,6 @@ class PostController {
         }
 
     };
-
 
 }
 
