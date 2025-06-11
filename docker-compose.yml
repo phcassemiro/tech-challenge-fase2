@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: node_app
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - MONGO_URI=${DB_CONNECTION_STRING}  # Referência a variável de ambiente no .env
+    env_file:
+      - .env  # Referência ao arquivo .env

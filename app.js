@@ -1,8 +1,8 @@
 import express from "express"
-import conectaNaDatabase from "./config/dbConfig.js";
-import routes from "./routes/route.js"
-import manipuladorDeErros from "./middlewares/manipuladorDeErros.js";
-import manipulador404 from "./middlewares/manipulador404.js";
+import conectaNaDatabase from "./src/config/dbConfig.js";
+import routes from "./src/routes/route.js"
+import manipuladorDeErros from "./src/middlewares/manipuladorDeErros.js";
+import manipulador404 from "./src/middlewares/manipulador404.js";
 
 const conexao = await conectaNaDatabase();
 
