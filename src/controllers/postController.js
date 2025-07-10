@@ -45,8 +45,10 @@ class PostController {
             const id = req.params.id;
             const postEncontrado = await post.findById(id);
             if(postEncontrado !== null){
-
-                res.status(200).json(postEncontrado);
+                const postObj = postEncontrado.toObject();
+                postObj.dataCriacao = postEncontrado.dataCriacao.toLocaleDateString("pt-BR");
+                postObj.dataAtualizacao = postEncontrado.dataAtualizacao.toLocaleDateString("pt-BR");
+                res.status(200).json(postObj);
             }else{
                 res.status(404).json({message: 'Id do post não localizado'})
             }
