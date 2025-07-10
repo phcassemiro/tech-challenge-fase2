@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "start:dev": "nest start --watch",
+    "start:prod": "npm start"
   },
   "repository": {
     "type": "git",
