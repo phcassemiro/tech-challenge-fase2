@@ -10,11 +10,11 @@ COPY package*.json ./
 # Instala as dependências
 RUN npm install
 
-# Copia o restante do código
+# Copia o restante do código para dentro do container
 COPY . .
 
-# Expõe a porta que sua aplicação usa
+# Exponha a porta que a aplicação vai usar
 EXPOSE 3000
 
-# Comando para rodar a aplicação
-CMD ["npm", "start"]
+# Comando para rodar a aplicação em produção
+CMD ["npm", "run", "start:prod"]

@@ -5,7 +5,7 @@ const routes = express.Router();
 
 routes.get("/posts", postController.listarPosts); //Lista de posts
 routes.get("/posts/busca", postController.listarPostPorFiltro); //Lista de post por query string
-routes.get("/posts/:id", postController.listarPostPorId); //Leitura de posts
+routes.get("/posts/:id", postController.listarPostPorId); //Lista de post por ID
 routes.post("/posts",postController.cadastrarPost);//Criação de postagem
 routes.put("/posts/:id",postController.atualizarPost);//Edição de postagem
 routes.delete("/posts/:id",postController.excluirPost);//Exclusão de postagem
