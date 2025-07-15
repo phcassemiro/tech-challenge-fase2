@@ -12,7 +12,16 @@ class PostController {
             if(descricao) busca.descricao = { $regex: descricao, $options: "i" };
 
             const postsResultado = await post.find(busca);
-            res.status(200).json(postsResultado);
+
+            const postsDatasFormatadas = postsResultado.map(post => {
+            const postObj = post.toObject();
+            postObj.dataCriacao = postObj.dataCriacao.toLocaleDateString("pt-BR");
+            postObj.dataAtualizacao = postObj.dataAtualizacao.toLocaleDateString("pt-BR");
+            return postObj;
+            });
+
+
+            res.status(200).json(postsDatasFormatadas);
 
         } catch (error) {
 
