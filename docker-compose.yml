@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mongo:
     image: mongo:5.0
-    container_name: mongo_db_projeto1
+    container_name: mongo_db
     ports:
       - "27017:27017"
     volumes:
@@ -11,7 +11,7 @@ services:
 
   app:
     build: .
-    container_name: node_app_projeto1
+    container_name: node_app
     ports:
       - "3000:3000"
     volumes:
