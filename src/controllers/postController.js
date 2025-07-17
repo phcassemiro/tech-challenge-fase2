@@ -86,6 +86,37 @@ class PostController {
 
     /**
      * @swagger
+     * /posts:
+     *   get:
+     *     summary: Lista os posts ativos
+     *     tags:
+     *       - Posts
+     *     description: Retorna apenas os posts ativos.
+     *     responses:
+     *       200:
+     *         description: Lista de todos os posts ativos
+     *       500:
+     *         description: Erro interno do servidor
+     */
+    static async listarPostsAtivos(req, res) {
+        try {
+            const listaPosts = await post.find({ativo: true});
+
+            const postsFormatados = listaPosts.map(post => {
+                const postObj = post.toObject();
+                postObj.dataCriacao = post.dataCriacao.toLocaleDateString("pt-BR");
+                postObj.dataAtualizacao = post.dataAtualizacao.toLocaleDateString("pt-BR");
+                return postObj;
+            });
+
+            res.status(200).json(postsFormatados);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    /**
+     * @swagger
      * /posts/{id}:
      *   get:
      *     summary: Retorna um post específico pelo ID

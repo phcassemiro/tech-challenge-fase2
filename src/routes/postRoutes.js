@@ -3,7 +3,8 @@ import postController from "../controllers/postController.js";
 
 const routes = express.Router();
 
-routes.get("/posts", postController.listarPosts); //Lista de posts
+routes.get("/posts", postController.listarPosts); //Lista de posts(Professor)
+routes.get("/postsAtivos", postController.listarPostsAtivos); //Lista de posts(Alunos)
 routes.get("/posts/busca", postController.listarPostPorFiltro); //Lista de post por query string
 routes.get("/posts/:id", postController.listarPostPorId); //Lista de post por ID
 routes.post("/posts",postController.cadastrarPost);//Criação de postagem
