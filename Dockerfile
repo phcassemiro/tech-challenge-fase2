@@ -17,4 +17,4 @@ COPY . .
 EXPOSE 3000
 
 # Comando para rodar a aplicação em produção
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "start"]
