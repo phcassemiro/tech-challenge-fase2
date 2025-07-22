@@ -57,17 +57,48 @@ class PostController {
      * @swagger
      * /posts:
      *   get:
+     *     summary: Lista os posts Ativos
+     *     tags:
+     *       - Posts
+     *     description: Retorna apenas os posts ativos.
+     *     responses:
+     *       200:
+     *         description: Lista dos posts ativos
+     *       500:
+     *         description: Erro interno do servidor
+     */
+    static async listarPosts(req, res) {''
+        try {
+            const listaPostsAtivos = await post.find({postAtivo: true});
+
+            const postsFormatados = listaPostsAtivos.map(post => {
+                const postObj = post.toObject();
+                postObj.dataCriacao = post.dataCriacao.toLocaleDateString("pt-BR");
+                postObj.dataAtualizacao = post.dataAtualizacao.toLocaleDateString("pt-BR");
+                return postObj;
+            });
+
+            res.status(200).json(postsFormatados);
+        } catch (error) {
+            next(error);
+        }
+    };
+
+    /**
+     * @swagger
+     * /posts/professor:
+     *   get:
      *     summary: Lista todos os posts
      *     tags:
      *       - Posts
-     *     description: Retorna todos os posts sem filtros.
+     *     description: Retorna todos os posts já criados, inclusive os inativos.
      *     responses:
      *       200:
      *         description: Lista de todos os posts
      *       500:
      *         description: Erro interno do servidor
      */
-    static async listarPosts(req, res) {
+    static async listarPostsProfessor(req, res) {
         try {
             const listaPosts = await post.find({});
 
