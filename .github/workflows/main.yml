@@ -31,4 +31,4 @@ jobs:
       - name: Run tests
         env:
           MONGO_URI: mongodb://localhost:27017/test
-        run:
+        run: npm test
