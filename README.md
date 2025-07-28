@@ -186,32 +186,55 @@ docker-compose up -d
 
 
 
-## Documentação Técnica
+## Como Executar a Aplicação
 
-Inclua no `README.md`:
+### 1. Pré-requisitos:
+Node.js: A aplicação depende do Node.js para funcionar, mas com Docker, você não precisa instalar o Node localmente.
 
-1. **Pré-requisitos**: Node, Docker, Docker‑Compose
-2. **Setup**:
-    
-    ```bash
-    git clone ...
-    docker-compose up -d
-    npm install
-    npm start
-    ```
-    
-3. **Execução dos testes**:
-    
-    ```bash
-    npm test
-    ```
-    
-4. **Acesso à documentação da API**: `http://localhost:3000/api-docs`
-5. **Arquitetura da aplicação**:
-    - Camadas: `controllers`, `models`, `routes`, `services`
-6. **CI/CD**: descrição dos workflows usados no GitHub Actions
+Docker: Usado para containerizar a aplicação.
 
+Docker Compose: Usado para orquestrar a aplicação e serviços relacionados.
 
+### 2. Configuração e Inicialização:
+- Clone o repositório:
+
+```bash
+git clone <url_do_repositorio>
+cd <diretorio_do_repositorio>
+```
+
+- Subir a aplicação com Docker Compose:
+Esse comando vai construir as imagens, instalar as dependências automaticamente e iniciar os containers.
+bash
+```
+docker-compose up -d
+```
+- O -d roda os containers em segundo plano (modo "detached").
+- Não é necessário rodar npm install, pois o Dockerfile já está configurado para instalar as dependências automaticamente durante a criação da imagem.
+
+### 3. Acessando a Aplicação:
+- A aplicação estará disponível no endereço configurado no docker-compose.yml (localhost:3000).
+- Abra o navegador e acesse http://localhost:3000/api-docs, onde <porta> é a porta configurada na sua aplicação.
+
+### 4. Execução dos Testes:
+Caso queira rodar os testes dentro do container, você pode executar o seguinte comando:
+
+bash
+```
+docker-compose exec <nome_do_servico> npm test
+```
+
+Onde:
+
+<nome_do_servico> é o nome do serviço configurado no docker-compose.yml. Por exemplo, se o nome do serviço for app, o comando seria docker-compose exec app npm test.
+
+### 5. Parar os Containers:
+Se precisar parar os containers, use:
+
+bash
+```
+docker-compose down
+```
 
 ## Recursos Úteis
 
