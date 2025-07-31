@@ -15,7 +15,6 @@ conexao.once("open", () => {
   console.log("Conexão com o banco feita com sucesso");
 });
 
-
 app.use(express.json());
 
 routes(app);
