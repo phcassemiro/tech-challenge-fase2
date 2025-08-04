@@ -238,6 +238,6 @@ docker-compose down
 
 ## Recursos Úteis
 
-- **Dev.to**: *Documenting Node.js API using Swagger* — configuração manual com `swagger-jsdoc`, acesso ao `/docs` e `/docs.json` ([reddit.com](https://www.reddit.com/r/node/comments/1erpbsu?utm_source=chatgpt.com), [dev.to](https://dev.to/desmondsanctity/documenting-nodejs-api-using-swagger-4klp?utm_source=chatgpt.com))
+- **Dev.to**: *Documenting Node.js API using Swagger* — configuração manual com `swagger-jsdoc`, acesso ao `/docs` e `/docs.json` [dev.to](https://dev.to/desmondsanctity/documenting-nodejs-api-using-swagger-4klp?utm_source=chatgpt.com))
 - **Robin Raju**: uso do Swagger Editor para validações e refino manual da spec YAML ([robinraju.io](https://robinraju.io/documenting-rest-apis-using-swagger/?utm_source=chatgpt.com))
 
