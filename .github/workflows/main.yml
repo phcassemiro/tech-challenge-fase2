@@ -1,10 +1,11 @@
 name: CI
 
 on:
+  workflow_dispatch: {}  # Gatilho manual
   push:
     branches: [ develop ]
   pull_request:
-    branches: [ prod ]
+    branches: [ develop, prod ]
 
 jobs:
   build:

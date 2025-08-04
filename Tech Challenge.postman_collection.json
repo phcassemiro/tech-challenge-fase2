@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "Listar Posts",
+			"name": "Listar Posts Ativos",
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -20,6 +20,25 @@
 					"port": "3000",
 					"path": [
 						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Todos os Posts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/posts/professor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"posts/professor"
 					]
 				}
 			},
@@ -52,7 +71,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"Teste \",\r\n    \"descricao\": \"decima aula\",\r\n    \"autor\": \"Claudio\"\r\n}",
+					"raw": "{\r\n    \"titulo\": \"Teste \",\r\n    \"descricao\": \"decima aula\",\r\n    \"autor\": \"Claudio\",\r\n    \"postAtivo\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
