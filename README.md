@@ -129,8 +129,6 @@ API RESTful para **gestão de postagens em ambiente educacional**, construída c
 <img width="1441" height="610" alt="image" src="https://github.com/user-attachments/assets/ca1252cf-d56f-477c-955f-be82c5aa5952" />
 
 
-
-
 ## Docker & MongoDB
 
 Arquivo `docker-compose.yml`:
@@ -236,6 +234,9 @@ bash
 ```
 docker-compose down
 ```
+## Conclusão
+
+Durante o desenvolvimento do projeto, a equipe passou por vários desafios importantes. No começo, foi difícil configurar o ambiente e fazer com que as partes do sistema conversassem bem entre si. Também tivemos que organizar melhor nosso código para que tudo ficasse mais claro e fácil de manter. Criar os testes foi outra etapa desafiadora, pois precisávamos garantir que tudo funcionasse corretamente, e isso exigiu algumas mudanças no que já estava pronto. A documentação também precisou de atenção especial para que fosse realmente útil para quem fosse usar o sistema. Mesmo com os obstáculos, conseguimos concluir o projeto com qualidade e aprendemos muito no processo — tanto em trabalho em equipe quanto em soluções mais eficientes.
 
 ## Recursos Úteis
 
