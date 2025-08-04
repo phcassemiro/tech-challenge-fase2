@@ -10,7 +10,7 @@ API RESTful para **gestão de postagens em ambiente educacional**, construída c
 - **Docker** — ambientes replicáveis e isolados
 - **GitHub Actions** — Workflows de CI/CD para lint, testes e deploy
 - **Swagger (OpenAPI 3)** — Documentação interativa da API
-- **Jest** (ou equivalente) — Testes unitários com cobertura mínima de 20%
+- **Jest** — Testes unitários com cobertura mínima de 20%
 
 
 
@@ -176,7 +176,7 @@ docker-compose up -d
 
 ## Testes e Qualidade
 
-- **Jest** (ou Mocha/Chai) com cobertura mínima de 20% focando nos controladores e lógica crítica.
+- **Jest** com cobertura mínima de 20% focando nos controladores e lógica crítica.
 - **ESLint** para padronização de código.
 - Workflows do GitHub Actions para:
     - `lint`
