@@ -52,7 +52,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\": \"Teste \",\r\n    \"descricao\": \"decima aula\",\r\n    \"autor\": \"Claudio\"\r\n}",
+					"raw": "{\r\n    \"titulo\": \"Teste \",\r\n    \"descricao\": \"decima aula\",\r\n    \"autor\": \"Claudio\",\r\n    \"postAtivo\": true\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
