@@ -126,7 +126,6 @@ API RESTful para **gestão de postagens em ambiente educacional**, construída c
 
 ## OpenAPI (Swagger)
 
-
 <img width="1506" height="760" alt="PrintSwagger" src="https://github.com/user-attachments/assets/01738851-3556-4359-b887-4a530b7eb6a7" />
 
 
