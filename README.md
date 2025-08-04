@@ -127,7 +127,7 @@ API RESTful para **gestão de postagens em ambiente educacional**, construída c
 ## OpenAPI (Swagger)
 
 
-<img width="862" height="643" alt="image" src="https://github.com/user-attachments/assets/b9495ecc-9ff5-4f5a-9b55-8d7825865429" />
+<img width="1506" height="760" alt="PrintSwagger" src="https://github.com/user-attachments/assets/01738851-3556-4359-b887-4a530b7eb6a7" />
 
 
 
@@ -223,6 +223,7 @@ bash
 ```
 docker-compose exec <nome_do_servico> npm test
 ```
+
 
 Onde:
 
